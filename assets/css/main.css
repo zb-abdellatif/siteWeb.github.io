@@ -1142,6 +1142,13 @@ section {
   background-position: center center;
   min-height: 400px;
 }
+.alt-services  .img-bg-left {
+  border-radius: 1em 0 0 1em;
+}
+
+.alt-services  .img-bg-right {
+  border-radius: 0 1em  1em 0;
+}
 
 .alt-services h3 {
   font-size: 28px;
