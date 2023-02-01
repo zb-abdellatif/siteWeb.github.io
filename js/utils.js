@@ -15,7 +15,7 @@ validateFormulaire = (idOrClassForm) => {
                 case 'email': {
                     if (!validateEmail($(this).val())) {
                         $(this).parent().append(`
-                     <span class="form-postuler-validation-message text-danger">Adresse e-mail invalide (Ex : example@gmail.com).</span>
+                     <span class="form-postuler-validation-message text-warning">Adresse e-mail invalide (Ex : example@gmail.com).</span>
                     `)
                         valid = false
                     }

@@ -17,6 +17,7 @@ function sendMail(idForm) {
         message: $('#message').val()
     }
     emailjs.init("7AGMST5MlKCBCe402")
+    $('.loading').addClass('d-block')
     emailjs.send("service_dp91uls","template_axtiw8g",{
         subject: contact.subject,
         email: contact.email,
@@ -24,7 +25,12 @@ function sendMail(idForm) {
         message: contact.message,
         content:""
     }) .then(() => {
-        alert('Sent!');
+        $('.sent-message').addClass('d-block')
+        $('.loading').removeClass('d-block')
+        setInterval(()=>{
+            $('.sent-message').removeClass('d-block')
+        },5000)
+
         resetForm(idForm)
     }, (err) => {
         alert(JSON.stringify(err));
