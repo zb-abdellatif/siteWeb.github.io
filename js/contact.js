@@ -33,6 +33,10 @@ function sendMail(idForm) {
 
         resetForm(idForm)
     }, (err) => {
-        alert(JSON.stringify(err));
+        $('.error-message').addClass('d-block')
+        $('.loading').removeClass('d-block')
+        setInterval(()=>{
+            $('.error-message').removeClass('d-block')
+        },5000)
     });
 }
