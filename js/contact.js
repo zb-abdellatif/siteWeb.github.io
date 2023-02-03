@@ -18,7 +18,7 @@ function sendMail(idForm) {
     }
     emailjs.init("7AGMST5MlKCBCe402")
     $('.loading').addClass('d-block')
-    emailjs.send("service_dp91uls","template_axtiw8g",{
+    emailjs.send("service_2xlcbwz","template_42cvf6q",{
         subject: contact.subject,
         email: contact.email,
         name: contact.name,
