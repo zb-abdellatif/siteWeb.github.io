@@ -16,7 +16,7 @@ function sendMail(idForm) {
         subject: $('#subject').val(),
         message: $('#message').val()
     }
-    emailjs.init("7AGMST5MlKCBCe402")
+    emailjs.init("wT6d3m1Bdk-R80uWq")
     $('.loading').addClass('d-block')
     emailjs.send("service_2xlcbwz","template_42cvf6q",{
         subject: contact.subject,
